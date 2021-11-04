@@ -1,0 +1,250 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style(bet_place).css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Soccer</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col p-0">
+                <div class="about-interface">
+                    <div class="dropdown">
+                        <button class="dropbtn">Язык интерфейса</button>
+                        <div class="dropdown-content">
+                            <a class="language" href="#">Русский</a>
+                            <a class="language" href="#">Қазакша</a>
+                            <a class="language" href="#">English</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Формат коэффициентов</button>
+                        <div class="dropdown-content">
+                            <a class="language" href="#">Десятичные (1.75)</a>
+                            <a class="language" href="#">Дробные (3/4)</a>
+                        </div>
+                    </div>
+                    <a href="enter" class="enter">Войти</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light olimp-bet justify-content-between">
+        <a class="navbar-brand" href="/">
+            <div class="logo"><img src="{% static 'image/olimp-logo.png' %}" alt=""></div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav d-flex">
+                <li class="nav-item">
+                    <div class="games">
+                        <a href="#" class="live-game nav-link">LIVE</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="games">
+                        <a href="#" class="lines nav-link">ЛИНИЯ</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="games">
+                        <a href="#" class="lines nav-link">БЫСТРЫЕ ИГРЫ</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="games">
+                        <a class="reg nav-link" href="enter">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="bottom-menu2">
+                    <div class="col">
+                        <div class="bottom-menu3">
+                            <a class="bottom-menu-info-res" href="#">РЕЗУЛЬТАТЫ</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bottom-menu4">
+                        <a class="bottom-menu-info-stat" href="#">СТАТИСТИКА</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bottom-menu5">
+                        <a class="bottom-menu-info-rules" href="rules">ПРАВИЛА</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bottom-menu6">
+                        <a class="bottom-menu-info-supp" href="support">ПОДДЕРЖКА</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bottom-menu7">
+                        <a class="bottom-menu-info-qa" href="my_bet">МОИ СТАВКИ</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bottom-menu8">
+                        <a class="bottom-menu-info-about-us" href="#">О НАС</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 test ">
+            <div class="now">
+                <div class="sports2-bet">
+                       <ul>
+                        {% if categories %}
+                        {% for category in categories %}
+                        <li><a href="matches?discipline={{category.name_of_category}}" class="football">{{category.name_of_category}}</a></li>
+                        {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+                <div class="col-8 main-part">
+                    <div class="bet-date">
+                        <p class="bet-date2">Линия на ~~~~~~~~</p>
+                    </div>
+                    <div class="main-bet-part">
+                        <div class="asdzxc">
+                            <div class="bet-name">
+                                <p class="name-football">Футбол. Лига Чемпионов УЕФА. Групповой этап</p>
+                            </div>
+                        </div>
+                        <div class="event-names-gray">
+                            <div class="main-bet">
+                                <!-- & = коэффициент -->
+                                <p class="win1">П1 - <button class="coefficient-btn">&</button></p>
+                                <p class="win1">П2 - <button class="coefficient-btn">&</button></p>
+                                <p class="win1">X - <button class="coefficient-btn">&</button></p>
+                                <p class="win1">1X - <button class="coefficient-btn">&</button></p>
+                                <p class="win1">12 - <button class="coefficient-btn">&</button></p>
+                                <p class="win1">2X - <button class="coefficient-btn">&</button></p>
+                            </div>
+                            <div class="goals">
+                                <p class="ind-total">Инд.тотал:</p>
+                                <div class="flex">
+                                    <p class="team-name">Team Name1 (0.5) мен - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Team Name1 (0.5) бол - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Team Name2 (0.5) мен - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Team Name2 (0.5) бол - <button class="coefficient-btn">&</button></p>
+                                </div>
+                            </div>
+                            <div class="goals">
+                                <div class="flex">
+                                    <p class="team-name">Team Name1 (1) мен - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Team Name1 (1) бол - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Team Name2 (1) мен - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Team Name2 (1) бол - <button class="coefficient-btn">&</button></p>
+                                </div>
+                            </div>
+                            <div class="goals">
+                                <p class="first-goal">Первый гол:</p>
+                                <div class="flex">
+                                    <p class="team-name">Team Name1 - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Team Name2 - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Никто - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Перв. гол с 25 по 90 мин - <button class="coefficient-btn">&</button></p>
+                                </div>
+                            </div>
+                            <div class="goals">
+                                <div class="flex">
+                                    <p class="team-name">Перв. гол с 1 по 24 мин - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Перв. гол до 10 мин - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Перв. гол с 11 до 20 мин - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Перв. гол с 21 до 30 мин - <button class="coefficient-btn">&</button></p>
+                                </div>
+                            </div>
+                            <div class="goals">
+                                <p class="first-goal">Победа с учетом форы:</p>
+                                <div class="flex">
+                                    <p class="team-name">Team Name1 (0) - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Team Name2 (0) - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Team Name1 (-2.5) - <button class="coefficient-btn">&</button></p>
+                                    <p class="team-name">Team Name2 (2.5) - <button class="coefficient-btn">&</button></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 test">
+                    <div class="container">
+                        <div class="now">
+                            <div class="sports2-bet">
+                                <ul>
+                        {% if categories %}
+                        {% for category in categories %}
+                        <li><a href="matches?discipline={{category.name_of_category}}" class="football">{{category.name_of_category}}</a></li>
+                        {% endfor %}
+                        {% endif %}
+                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="igra">Отвественная игра</p>
+            <p>
+                <a href="https://vk.com/olimpbetkz"><img src="{% static 'image/vk.png' %}" alt=""></a>
+            </p>
+            <p>
+                <a href="https://www.instagram.com/olimpbet_russia/?hl=ru"><img src="{% static 'image/inst.png' %}" alt=""></a>
+            </p>
+            <p>
+                <a href="https://apps.apple.com/kz/app/id1496975315?af_prt=olimpbet&pid=olimpbet.kz"><img src="{% static 'image/ios-removebg-preview.png' %}" alt=""></a>
+            </p>
+            <p>
+                <a href="#"><img src="{% static 'image/android-removebg-preview.png' %}" alt=""></a>
+            </p>
+            <p>
+                <a href="#"><img src="{% static 'image/mobile-version-removebg-preview.png' %}" alt=""></a>
+            </p>
+            <p class="copyright">Copyright © 2021 ТОО «NetBet»</p>
+        </footer>
+        <script>
+            function openModalBet(event) {
+                //TODO
+                //Place bet with API request
+                //Add bet to database
+                //Fix value that has been passed
+                console.log(event.target.innerHTML)
+            }
+            let coefficientBtns = document.querySelectorAll(".coefficient-btn")
+            coefficientBtns.forEach(btn => {
+                btn.innerHTML = (Math.random() * 5 + 1).toFixed(2);
+                btn.onclick = (e) => openModalBet(e);
+            })
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

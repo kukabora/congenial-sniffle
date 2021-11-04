@@ -1,0 +1,269 @@
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+.dropbtn {
+    background-color: gray;
+    padding: 3px;
+    font-size: 12px;
+    border: none;
+    margin-top: 2px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.language {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.soon {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+} 
+
+.dropdown:hover .dropbtn 
+{   background-color: #3e8e41;
+
+}
+.event-names-gray:hover .event-names {
+    color: red;
+}
+.event-names {
+    font-weight: bold;
+}
+.about-interface {
+    display: flex;
+    height: 25px;
+    background-color: gray;
+    justify-content: space-between;
+}
+
+.forgot {
+    color:black;
+    text-decoration: none;
+    background-color: gray;
+}
+.olimp-bet {
+    height: 56px;
+    background-color:rgb(102, 19, 19);
+}
+.live-game {
+    color:yellow;
+    text-decoration: none;
+}
+
+.fast-game {
+    color:white;
+    text-decoration: none;
+}
+.lines {
+    color:white;
+    text-decoration: none;
+}
+
+.registration {
+    height: 45px;
+    margin-top: 22px;
+    
+}
+
+.reg {
+    text-decoration: none;
+    color:white;
+}
+.bottom-menu2 {
+    display: flex;
+    height: 33px;
+    background-color:gray;
+    padding-left: 10px;
+}
+.bottom-menu3 {
+    display: flex;
+    max-width: 1650px;
+    height: 33px;
+    background-color:gray;
+    justify-content:center;
+    padding-left: 10px;
+}
+.bottom-menu4 {
+    display: flex;
+    max-width: 1650px;
+    height: 33px;
+    background-color:gray;
+    justify-content:center;
+    padding-left: 10px;
+}
+.bottom-menu5 {
+    display: flex;
+    max-width: 1650px;
+    height: 33px;
+    background-color:gray;
+    justify-content:center;
+    padding-left: 10px;
+}
+.bottom-menu6 {
+    display: flex;
+    max-width: 1650px;
+    height: 33px;
+    background-color:gray;
+    justify-content:center;
+    padding-left: 10px;
+}
+.bottom-menu7 {
+    display: flex;
+    max-width: 1650px;
+    height: 33px;
+    background-color:gray;
+    justify-content:center;
+    padding-left: 10px;
+}
+.bottom-menu8 {
+    display: flex;
+    max-width: 1650px;
+    height: 33px;
+    background-color:gray;
+    justify-content:center;
+    padding-left: 10px;
+}
+.bottom-menu-info-bonus {
+    color:black;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.bottom-menu-info-res {
+    color:black;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.bottom-menu-info-stat {
+    color:black;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.bottom-menu-info-rules {
+    color:black;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.bottom-menu-info-supp {
+    color:black;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.bottom-menu-info-qa {
+    color:black;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.bottom-menu-info-about-us {
+    color:black;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.bottom-menu3:hover .bottom-menu-info-res {
+    background-color: rgb(145, 144, 144);
+}
+.bottom-menu6:hover .bottom-menu-info-supp {
+    background-color: rgb(145, 144, 144);
+}
+.bottom-menu8:hover .bottom-menu-info-about-us {
+    background-color: rgb(145, 144, 144);
+}
+.bottom-menu7:hover .bottom-menu-info-qa {
+    background-color: rgb(145, 144, 144);
+}
+.bottom-menu5:hover .bottom-menu-info-rules {
+    background-color: rgb(145, 144, 144);
+}
+.bottom-menu4:hover .bottom-menu-info-stat {
+    background-color: rgb(145, 144, 144)
+}
+.bottom-menu2:hover .bottom-menu-info-bonus {
+    background-color: rgb(145, 144, 144);
+}
+.enter {
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+    font-weight: bold;
+}
+
+.row2 {
+    margin-bottom: 15px;
+}
+.now {
+    margin-right: 10px;
+    display: flex;
+    background-size: cover;
+    border: 1px solid black;
+    margin-top: 10px;
+    background-color: rgb(241,241,241);
+}
+
+.football {
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}
+.about-rules {
+    text-align: center;
+    margin-top: 15px;
+}
+.p-about-rules {
+    color: rgb(102, 19, 19);
+    font-weight: bold;
+    font-size: 120%;
+}
+.p-license {
+    font-size: 80%;
+}
+.event-names {
+    text-decoration: none;
+    color: black;
+    font-size: 85%;
+    color:rgb(161,50,42);
+    font-weight: bold;
+}
+.footer {
+    background-color: rgb(145, 144, 144);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@media only screen and (max-width: 700px){
+    .bottom-menu2{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 250px;
+    }
+    .sport-images {
+        margin-top: 20px;
+        display: block;
+    }
+    .footer {
+        background-color: rgb(145, 144, 144);
+        display: block;
+    }
+}

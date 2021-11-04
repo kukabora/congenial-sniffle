@@ -1,0 +1,74 @@
+.container {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+body {
+    background-image: url("");
+}
+.all {
+    background-color:rgb(102, 19, 19);
+}
+.header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+  }
+  .nav a {
+	margin-left: 185px;
+    text-decoration: none;
+    color: black;
+  }
+
+ .nav:hover a {
+     color: black;
+ }
+ .olimp-link:hover {
+    border-bottom: 2px solid rgb(107,12,23);
+    padding-bottom: 5px;
+ }
+ .location-link:hover {
+    border-bottom: 2px solid rgb(107,12,23);
+    padding-bottom: 5px;
+ }
+ .community-link:hover {
+    border-bottom: 2px solid rgb(107,12,23);
+    padding-bottom: 5px;
+ }
+ .services-link:hover {
+    border-bottom: 2px solid rgb(107,12,23);
+    padding-bottom: 5px;
+ }
+ 
+ .olimp {
+    color: rgb(102, 19, 19);
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+ }
+ .olimp-bet {
+     margin-top: 80px;
+     height: 500px;
+     width: 300px;
+     border: 1px solid black;
+     margin-left: 500px;
+ }
+ .name {
+     margin-top: 25px;
+     margin-left: 55px;
+ }
+ .help {
+    margin-top: 25px;
+    margin-left: 55px;
+}
+.send {
+	border-radius: 10px;
+	width: 150px;
+	height: 50px;
+	background-color: rgb(102, 19, 19);
+	color:white;
+}
+.send-button {
+    text-align: center;
+    margin-top: 150px;
+}
