@@ -50,7 +50,8 @@ def my_bet(request):
 
 
 def bet_place(request):
-    context = {"categories": Category.objects.all()}
+    match = Match.objects.get(id = int(request.GET['id']))
+    context = {"categories": Category.objects.all(), 'match': match}
     return render(request, 'BetApplication/bet_place.html', context)
 
 

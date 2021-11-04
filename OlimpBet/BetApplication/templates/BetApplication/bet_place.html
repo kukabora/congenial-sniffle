@@ -127,12 +127,12 @@
 
                 <div class="col-8 main-part">
                     <div class="bet-date">
-                        <p class="bet-date2">Линия на ~~~~~~~~</p>
+                        <p class="bet-date2">Линия на </p>
                     </div>
                     <div class="main-bet-part">
                         <div class="asdzxc">
                             <div class="bet-name">
-                                <p class="name-football">Футбол. Лига Чемпионов УЕФА. Групповой этап</p>
+                                <p class="name-football">{{ match.category.name_of_category }}. {{ match.tournament_name }}. {{ match.location_of_match }}</p>
                             </div>
                         </div>
                         <div class="event-names-gray">
@@ -241,6 +241,11 @@
                 btn.innerHTML = (Math.random() * 5 + 1).toFixed(2);
                 btn.onclick = (e) => openModalBet(e);
             })
+        </script>
+        <script>
+            let datefield = document.querySelector(".bet-date2")
+            let today = new Date()
+            datefield.innerHTML += today.getDate() + "." + today.getMonth() + "." + today.getFullYear()
         </script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

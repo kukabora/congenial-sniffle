@@ -3,325 +3,321 @@
     margin: 0 auto;
   } */
 .dropbtn {
-    background-color: gray;
-    padding: 3px;
-    font-size: 12px;
-    border: none;
-    margin-top: 2px;
+  background-color: gray;
+  padding: 3px;
+  font-size: 12px;
+  border: none;
+  margin-top: 2px;
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
-    margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .language {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 .soon {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
-} 
+  display: block;
+}
 
-.dropdown:hover .dropbtn 
-{   background-color: #3e8e41;
-
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }
 .about-interface {
-    display: flex;
-    max-width: 1650px;
-    height: 25px;
-    background-color: gray;
-    justify-content: space-between;
+  display: flex;
+  max-width: 1650px;
+  height: 25px;
+  background-color: gray;
+  justify-content: space-between;
 }
 
 .forgot {
-    color:black;
-    text-decoration: none;
-    background-color: gray;
+  color: black;
+  text-decoration: none;
+  background-color: gray;
 }
 .olimp-bet {
-    display: flex;
-    max-width: 1650px;
-    height: 56px;
-    background-color:rgb(102, 19, 19);
-    justify-content:space-between;
+  display: flex;
+  max-width: 1650px;
+  height: 56px;
+  background-color: rgb(102, 19, 19);
+  justify-content: space-between;
 }
 .live-game {
-    color:yellow;
-    text-decoration: none;
+  color: yellow;
+  text-decoration: none;
 }
 
 .fast-game {
-    color:white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 .lines {
-    color:white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 .games {
-    padding: 15px;
+  padding: 15px;
 }
 .registration {
-    /* background-color: yellow; */
-    height: 45px;
-    margin-top: 15px;
+  /* background-color: yellow; */
+  height: 45px;
+  margin-top: 15px;
 }
 
 .reg {
-    text-decoration: none;
-    color:white;
+  text-decoration: none;
+  color: white;
 }
 .bottom-menu2 {
-    display: flex;
-    max-width: 1650px;
-    height: 33px;
-    background-color:gray;
-    justify-content:center;
-    padding-left: 10px;
+  display: flex;
+  max-width: 1650px;
+  height: 33px;
+  background-color: gray;
+  justify-content: center;
+  padding-left: 10px;
 }
 .bottom-menu3 {
-    display: flex;
-    max-width: 1650px;
-    height: 33px;
-    background-color:gray;
-    justify-content:center;
-    padding-left: 10px;
+  display: flex;
+  max-width: 1650px;
+  height: 33px;
+  background-color: gray;
+  justify-content: center;
+  padding-left: 10px;
 }
 .bottom-menu4 {
-    display: flex;
-    max-width: 1650px;
-    height: 33px;
-    background-color:gray;
-    justify-content:center;
-    padding-left: 10px;
+  display: flex;
+  max-width: 1650px;
+  height: 33px;
+  background-color: gray;
+  justify-content: center;
+  padding-left: 10px;
 }
 .bottom-menu5 {
-    display: flex;
-    max-width: 1650px;
-    height: 33px;
-    background-color:gray;
-    justify-content:center;
-    padding-left: 10px;
+  display: flex;
+  max-width: 1650px;
+  height: 33px;
+  background-color: gray;
+  justify-content: center;
+  padding-left: 10px;
 }
 .bottom-menu6 {
-    display: flex;
-    max-width: 1650px;
-    height: 33px;
-    background-color:gray;
-    justify-content:center;
-    padding-left: 10px;
+  display: flex;
+  max-width: 1650px;
+  height: 33px;
+  background-color: gray;
+  justify-content: center;
+  padding-left: 10px;
 }
 .bottom-menu7 {
-    display: flex;
-    max-width: 1650px;
-    height: 33px;
-    background-color:gray;
-    justify-content:center;
-    padding-left: 10px;
+  display: flex;
+  max-width: 1650px;
+  height: 33px;
+  background-color: gray;
+  justify-content: center;
+  padding-left: 10px;
 }
 .bottom-menu8 {
-    display: flex;
-    max-width: 1650px;
-    height: 33px;
-    background-color:gray;
-    justify-content:center;
-    padding-left: 10px;
+  display: flex;
+  max-width: 1650px;
+  height: 33px;
+  background-color: gray;
+  justify-content: center;
+  padding-left: 10px;
 }
 .bottom-menu-info-bonus {
-    color:black;
-    text-decoration: none;
-    margin-top: 10px;
+  color: black;
+  text-decoration: none;
+  margin-top: 10px;
 }
 .bottom-menu-info-res {
-    color:black;
-    text-decoration: none;
-    margin-top: 10px;
+  color: black;
+  text-decoration: none;
+  margin-top: 10px;
 }
 .bottom-menu-info-stat {
-    color:black;
-    text-decoration: none;
-    margin-top: 10px;
+  color: black;
+  text-decoration: none;
+  margin-top: 10px;
 }
 .bottom-menu-info-rules {
-    color:black;
-    text-decoration: none;
-    margin-top: 10px;
+  color: black;
+  text-decoration: none;
+  margin-top: 10px;
 }
 .bottom-menu-info-supp {
-    color:black;
-    text-decoration: none;
-    margin-top: 10px;
+  color: black;
+  text-decoration: none;
+  margin-top: 10px;
 }
 .bottom-menu-info-qa {
-    color:black;
-    text-decoration: none;
-    margin-top: 10px;
+  color: black;
+  text-decoration: none;
+  margin-top: 10px;
 }
 .bottom-menu-info-about-us {
-    color:black;
-    text-decoration: none;
-    margin-top: 10px;
+  color: black;
+  text-decoration: none;
+  margin-top: 10px;
 }
 .bottom-menu3:hover .bottom-menu-info-res {
-    background-color: rgb(145, 144, 144);
+  background-color: rgb(145, 144, 144);
 }
 .bottom-menu6:hover .bottom-menu-info-supp {
-    background-color: rgb(145, 144, 144);
+  background-color: rgb(145, 144, 144);
 }
 .bottom-menu8:hover .bottom-menu-info-about-us {
-    background-color: rgb(145, 144, 144);
+  background-color: rgb(145, 144, 144);
 }
 .bottom-menu7:hover .bottom-menu-info-qa {
-    background-color: rgb(145, 144, 144);
+  background-color: rgb(145, 144, 144);
 }
 .bottom-menu5:hover .bottom-menu-info-rules {
-    background-color: rgb(145, 144, 144);
+  background-color: rgb(145, 144, 144);
 }
 .bottom-menu4:hover .bottom-menu-info-stat {
-    background-color: rgb(145, 144, 144)
+  background-color: rgb(145, 144, 144);
 }
 .bottom-menu2:hover .bottom-menu-info-bonus {
-    background-color: rgb(145, 144, 144);
+  background-color: rgb(145, 144, 144);
 }
 .enter {
-    text-decoration: none;
-    color: black;
-    padding: 3px;
-    font-weight: bold;
+  text-decoration: none;
+  color: black;
+  padding: 3px;
+  font-weight: bold;
 }
 
 .sports-bet {
-    height: 300px;
-    
+  height: 300px;
 }
-
 
 .now {
-    margin-right: 10px;
-    display: flex;
-    background-size: cover;
-    border: 1px solid black;
-    margin-top: 10px;
-    background-color: rgb(241,241,241);
+  margin-right: 10px;
+  display: flex;
+  background-size: cover;
+  border: 1px solid black;
+  margin-top: 10px;
+  background-color: rgb(241, 241, 241);
 }
 .football {
-    text-decoration: none;
-    color: black;
-    font-size: small;
+  text-decoration: none;
+  color: black;
+  font-size: small;
 }
 
 .now:hover .football {
-    color: black;
+  color: black;
 }
 
 .bet-date {
-    text-align: center;
-    margin-top: 10px;
-    font-weight: bold;
-    color: rgb(102, 19, 19);
-    font-size: 150%;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: rgb(102, 19, 19);
+  font-size: 150%;
 }
 
 .asdzxc {
-    width: 970px;
-    height: 27px;
-    border: 1px solid black;
-   background-color: rgb(102, 19, 19);
+  width: 970px;
+  height: 27px;
+  border: 1px solid black;
+  background-color: rgb(102, 19, 19);
 }
 
 .bet-name {
-    text-align: center;
+  text-align: center;
 }
 
 .name-football {
-    color: white;
-    font-weight: bold;
+  color: white;
+  font-weight: bold;
 }
 .event-names-gray {
-    width: 970px;
-    height: 22px;
-    background-color: rgb(241,241,241);
+  width: 970px;
+  height: 22px;
+  background-color: rgb(241, 241, 241);
 }
 .event-names {
-    text-decoration: none;
-    color: black;
-    font-size: 85%;
-    color:rgb(161,50,42);
-    font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 85%;
+  color: rgb(161, 50, 42);
+  font-weight: bold;
 }
 .event-names-gray:hover .event-names {
-    color: rgb(161,50,42);
+  color: rgb(161, 50, 42);
 }
 .event-names-white:hover .event-names {
-    color: rgb(161,50,42);
+  color: rgb(161, 50, 42);
 }
 .event-names-white {
-    width: 970px;
-    height: 22px;
-    background-color: white;
+  width: 970px;
+  height: 22px;
+  background-color: white;
 }
 .footer {
-    margin-top: 70px;
-    width: 1516px;
-    background-color: rgb(145, 144, 144);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  margin-top: 650px;
+  background-color: rgb(145, 144, 144);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-@media only screen and (max-width: 700px){
-    .bottom-menu2{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 250px;
-    }
-    .sport-images {
-        margin-top: 20px;
-        display: block;
-    }
-    .footer {
-        background-color: rgb(145, 144, 144);
-        display: block;
-    }
+@media only screen and (max-width: 700px) {
+  .bottom-menu2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 250px;
+  }
+  .sport-images {
+    margin-top: 20px;
+    display: block;
+  }
+  .footer {
+    background-color: rgb(145, 144, 144);
+    display: block;
+  }
 }
 
 button {
-    border: none;
-    font-weight: bold;
+  border: none;
+  font-weight: bold;
 }
 .ind-total {
-    font-weight: bold;
+  font-weight: bold;
 }
 .win1 {
-    font-size: 90%;
+  font-size: 90%;
 }
 .team-name {
-    font-size: 90%;
+  font-size: 90%;
 }
 .flex {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .first-goal {
-    font-weight: bold;
+  font-weight: bold;
 }
