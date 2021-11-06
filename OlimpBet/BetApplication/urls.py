@@ -18,7 +18,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name="main"),
     # path('admin', views.admin),
     path('bet_place', views.bet_place),
     path('my_bet', views.my_bet),
