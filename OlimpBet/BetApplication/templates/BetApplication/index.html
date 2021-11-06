@@ -29,8 +29,12 @@
                           <a class="language" href="#">Десятичные (1.75)</a>
                           <a class="language" href="#">Дробные (3/4)</a>
                         </div>
-                      </div>
-                      <a href="enter" class="enter">Войти</a>
+                      </div>                    {% if user.is_authenticated %}
+                      <a href="#">Добро пожаловать, {{user.username}}!</a>
+                    <a href="logout" class="enter">Выйти из персонального аккаунта</a>
+                    {% else %}
+                    <a href="enter" class="enter">Войти</a>
+                    {% endif %}
                 </div>
             </div>
         </div>

@@ -40,6 +40,11 @@ def support(request):
     return render(request, 'BetApplication/support.html', context)
 
 
+def logging_out_view(request):
+    logout(request)
+    return redirect("main")
+
+
 def enter(request):
     context = {}
     if request.method == "POST":
@@ -49,7 +54,7 @@ def enter(request):
                 context['err'] = "Passwords are not matching!"
                 return render(request, 'BetApplication/enter.html', context)
             user = User.objects.create_user(
-                request.POST['fullname'], request.POST['email'], request.POST['password'])
+                request.POST['email'], request.POST['fullname'], request.POST['password'])
             user.save()
             customUser = CustomUser(
                 user=user, phone=request.POST['phone-number'], balance=0)

@@ -27,5 +27,6 @@ urlpatterns = [
     path('matches', views.matches),
     path('enter', views.enter),
     path('support', views.support),
+    path('logout', views.logging_out_view)
 
 ]
