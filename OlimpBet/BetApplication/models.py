@@ -21,10 +21,6 @@ class Category(models.Model):
     name = models.CharField(max_length=50, name="name_of_category")
 
 
-class Outcome(models.Model):
-    name = models.CharField(max_length=50, null=False)
-
-
 class Match(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     first_team = models.ForeignKey(
@@ -40,4 +36,4 @@ class Bet(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     match_id = models.ForeignKey(Match, on_delete=models.CASCADE)
     bet = models.IntegerField(null=False)
-    outcome = models.ForeignKey(Outcome, on_delete=models.CASCADE)
+    outcome = models.CharField(max_length=99, null=False)
