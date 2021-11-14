@@ -143,7 +143,7 @@
                             {% if matches %}
                             {% for match in matches %}
                         <div class="event-names-white">
-                            <a href="#" class="event-names"><b>{{match.first_team.name}}</b> vs <b>{{match.second_team.name}}</b> ({{match.group}})</a>
+                            <a href="bet_place?id={{match.id}}" class="event-names"><b>{{match.first_team.name}}</b> vs <b>{{match.second_team.name}}</b> ({{match.group}})</a>
                         </div>
                             {% endfor %}
                             {% endif %}
@@ -164,6 +164,8 @@
                 </div>
             </div>
         </div>
+
+
 
         <footer class="footer">
             <p class="igra">Отвественная игра</p>
