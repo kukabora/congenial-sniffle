@@ -30,12 +30,10 @@
                             <a class="language" href="#">Дробные (3/4)</a>
                         </div>
                     </div>
-{% if user.is_authenticated %}
-                      <a href="#">Добро пожаловать, {{user.username}}!</a>
-                    <a href="logout" class="enter">Выйти из персонального аккаунта</a>
-                    {% else %}
-                    <a href="enter" class="enter">Войти</a>
-                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <a href="#">Добро пожаловать, {{user.username}}!</a>
+                    <a href="logout" class="enter">Выйти из персонального аккаунта</a> {% else %}
+                    <a href="enter" class="enter">Войти</a> {% endif %}
                 </div>
             </div>
         </div>
@@ -123,12 +121,11 @@
                         {% if categories %}
                         {% for category in categories %}
                         <li><a href="matches?discipline={{category.name_of_category}}" class="football">{{category.name_of_category}}</a></li>
-                        {% endfor %}
-                        {% endif %}
-                    </ul>
+                            {% endfor %} {% endif %}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
                 <div class="col-8 main-part">
                     <div class="bet-date">
@@ -204,55 +201,63 @@
                         {% if categories %}
                         {% for category in categories %}
                         <li><a href="matches?discipline={{category.name_of_category}}" class="football">{{category.name_of_category}}</a></li>
-                        {% endfor %}
-                        {% endif %}
-                    </ul>
+                                    {% endfor %} {% endif %}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="bet_place" class="modal" style="border:  10vw solid rgba(12, 12, 12, 0.8);">
-            <div class="modal-content container center-align">
-            
+            <div id="bet_place" class="modal" style="border:  10vw solid rgba(12, 12, 12, 0.8);">
+                <div class="modal-content" style="width: 100%">
+                    <div class="container center-align">
+                        <h1 style="margin: 2%;">Are you sure that you want place a bet on this match?</h1>
+                        <h3 style="margin: 2%;">Match name: </h3>
+                        <h3 style="margin: 2%;">Team 1: </h3>
+                        <h3 style="margin: 2%;">Team 2: </h3>
+                        <h4 style="margin: 2%;">Outcome of the match: </h4>
+                        <label>Your bet:</label>
+                        <input type="number" name="" id="">
+                        <h5 style="margin: 2%;">Current balance: {{user.customUser.balance}}$</h5>
+                    </div>
+                </div>
             </div>
-        </div>
-        <footer class="footer">
-            <p class="igra">Отвественная игра</p>
-            <p>
-                <a href="https://vk.com/olimpbetkz"><img src="{% static 'image/vk.png' %}" alt=""></a>
-            </p>
-            <p>
-                <a href="https://www.instagram.com/olimpbet_russia/?hl=ru"><img src="{% static 'image/inst.png' %}" alt=""></a>
-            </p>
-            <p>
-                <a href="https://apps.apple.com/kz/app/id1496975315?af_prt=olimpbet&pid=olimpbet.kz"><img src="{% static 'image/ios-removebg-preview.png' %}" alt=""></a>
-            </p>
-            <p>
-                <a href="#"><img src="{% static 'image/android-removebg-preview.png' %}" alt=""></a>
-            </p>
-            <p>
-                <a href="#"><img src="{% static 'image/mobile-version-removebg-preview.png' %}" alt=""></a>
-            </p>
-            <p class="copyright">Copyright © 2021 ТОО «NetBet»</p>
-        </footer>
-        <script>
-            let coefficientBtns = document.querySelectorAll(".coefficient-btn")
-            coefficientBtns.forEach(btn => {
-                btn.innerHTML = (Math.random() * 5 + 1).toFixed(2);
-            })
-        </script>
-        <script>
-            let datefield = document.querySelector(".bet-date2")
-            let today = new Date()
-            datefield.innerHTML += today.getDate() + "." + today.getMonth() + "." + today.getFullYear()
-        </script>
-        <script src="{% static 'js/materialize.js' %}"></script>
-        <script src="{% static 'js/modals.js' %}"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <footer class="footer">
+                <p class="igra">Отвественная игра</p>
+                <p>
+                    <a href="https://vk.com/olimpbetkz"><img src="{% static 'image/vk.png' %}" alt=""></a>
+                </p>
+                <p>
+                    <a href="https://www.instagram.com/olimpbet_russia/?hl=ru"><img src="{% static 'image/inst.png' %}" alt=""></a>
+                </p>
+                <p>
+                    <a href="https://apps.apple.com/kz/app/id1496975315?af_prt=olimpbet&pid=olimpbet.kz"><img src="{% static 'image/ios-removebg-preview.png' %}" alt=""></a>
+                </p>
+                <p>
+                    <a href="#"><img src="{% static 'image/android-removebg-preview.png' %}" alt=""></a>
+                </p>
+                <p>
+                    <a href="#"><img src="{% static 'image/mobile-version-removebg-preview.png' %}" alt=""></a>
+                </p>
+                <p class="copyright">Copyright © 2021 ТОО «NetBet»</p>
+            </footer>
+            <script>
+                let coefficientBtns = document.querySelectorAll(".coefficient-btn")
+                coefficientBtns.forEach(btn => {
+                    btn.innerHTML = (Math.random() * 5 + 1).toFixed(2);
+                })
+            </script>
+            <script>
+                let datefield = document.querySelector(".bet-date2")
+                let today = new Date()
+                datefield.innerHTML += today.getDate() + "." + today.getMonth() + "." + today.getFullYear()
+            </script>
+            <script src="{% static 'js/materialize.js' %}"></script>
+            <script src="{% static 'js/modals.js' %}"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

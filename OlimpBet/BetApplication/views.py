@@ -81,6 +81,11 @@ def bet_place(request):
     return render(request, 'BetApplication/bet_place.html', context)
 
 
+def payment(request):
+    context = {}
+    return render(request, 'BetApplication/payment.html', context)
+
+
 def index(request):
     context = {"categories": Category.objects.all()}
     for category in context['categories']:
