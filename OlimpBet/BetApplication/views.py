@@ -71,7 +71,8 @@ def enter(request):
 
 
 def my_bet(request):
-    context = {"categories": Category.objects.all()}
+    context = {"categories": Category.objects.all(
+    ), 'bets': Bet.objects.filter(owner=request.user.id)}
     return render(request, 'BetApplication/my_bet.html', context)
 
 
@@ -84,6 +85,20 @@ def bet_place(request):
 def payment(request):
     context = {}
     return render(request, 'BetApplication/payment.html', context)
+
+
+def placeBet(request):
+    context = {"categories": Category.objects.all()}
+    bet = request.POST['bet']
+    match = Match.objects.get(id=request.POST['matchId'])
+    outcome = request.POST['outcome']
+    coef = request.POST['coef']
+    potential = request.POST['potential']
+    user = User.objects.get(id=request.POST['userId'])
+    newBet = Bet.objects.create(
+        bet=bet, match_id=match, owner=user, outcome=outcome, coefficient=coef, potential=potential)
+    newBet.save()
+    return render(request, 'BetApplication/placeBet.html', context)
 
 
 def index(request):

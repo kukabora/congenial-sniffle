@@ -129,6 +129,15 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-8">
+                {% if bets %}
+                {% for bet in bets %}
+                        <div class="event-names-white">
+                            <a href="#" class="event-names"><b>{{bet.match_id.first_team.name}}</b> vs <b>{{bet.match_id.second_team.name}}</b> ({{bet.match_id.group}}), | {{bet.bet}}$ - {{bet.outcome}}. Потенциальный выигрыш: {{bet.potential}}</a>
+                        </div>
+                {% endfor %}
+                {% endif %}
+            </div>
             
     <div class="container-fluid">
         <div class="row">

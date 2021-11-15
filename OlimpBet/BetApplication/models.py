@@ -37,3 +37,5 @@ class Bet(models.Model):
     match_id = models.ForeignKey(Match, on_delete=models.CASCADE)
     bet = models.IntegerField(null=False)
     outcome = models.CharField(max_length=99, null=False)
+    coefficient = models.FloatField(null=False, default=1.0)
+    potential = models.FloatField(null=False, default=1.0)

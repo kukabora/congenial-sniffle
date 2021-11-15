@@ -129,69 +129,8 @@
                 </div>
 
                 <div class="col-8 main-part">
-                    <div class="bet-date">
-                        <p class="bet-date2">Линия на </p>
-                    </div>
-                    <div class="main-bet-part">
-                        <div class="asdzxc">
-                            <div class="bet-name">
-                                <p class="name-football">{{ match.category.name_of_category }}. {{ match.tournament_name }}. {{ match.location_of_match }}</p>
-                            </div>
-                        </div>
-                        <div class="event-names-gray">
-                            <div class="main-bet">
-                                <p class="win1"><span class="outcome">П1</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                <p class="win1"><span class="outcome">П2</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                <p class="win1"><span class="outcome">X </span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                <p class="win1"><span class="outcome">1X</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                <p class="win1"><span class="outcome">12</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                <p class="win1"><span class="outcome">2X</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                            </div>
-                            <div class="goals">
-                                <p class="ind-total">Инд.тотал:</p>
-                                <div class="flex">
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">{{match.first_team.name}} (0.5) мен </span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">{{match.first_team.name}} (0.5) бол </span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">{{match.second_team.name}} (0.5) мен</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">{{match.second_team.name}} (0.5) бол</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                </div>
-                            </div>
-                            <div class="goals">
-                                <div class="flex">
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">{{match.first_team.name}} (1) мен  </span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">{{match.first_team.name}} (1) бол  </span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">{{match.second_team.name}} (1) мен </span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">{{match.second_team.name}} (1) бол </span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                </div>
-                            </div>
-                            <div class="goals">
-                                <p class="first-goal">Первый гол:</p>
-                                <div class="flex">
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">{{match.first_team.name}}</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">{{match.second_team.name}}</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">Никто</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"> <span class="outcome">Перв. гол с 25 по 90 мин</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                </div>
-                            </div>
-                            <div class="goals">
-                                <div class="flex">
-                                    <p class="team-name" href="#bet_place"><span class="outcome">Перв. гол с 1 по 24 мин</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"><span class="outcome">Перв. гол до 10 мин</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"><span class="outcome">Перв. гол с 11 до 20 мин</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"><span class="outcome">Перв. гол с 21 до 30 мин</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                </div>
-                            </div>
-                            <div class="goals">
-                                <p class="first-goal">Победа с учетом форы:</p>
-                                <div class="flex">
-                                    <p class="team-name" href="#bet_place"><span class="outcome">{{match.first_team.name}} (0)   </span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"><span class="outcome">{{match.second_team.name}} (0)  </span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"><span class="outcome">{{match.first_team.name}} (-2.5)</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                    <p class="team-name" href="#bet_place"><span class="outcome">{{match.second_team.name}} (2.5)</span> - <button class="coefficient-btn modal-trigger" data-target="bet_place">&</button></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h1>Ставка была сделана!</h1>
+                <h3>Вы можете отслеживать свои ставки в меню "МОИ СТАВКИ".</h3>
                 </div>
                 <div class="col-2 test">
                     <div class="container">
@@ -222,9 +161,6 @@
                         <label>Ваша ставка (в долларах):</label>
                         <input type="hidden" name="userId" value={{user.id}}>
                         <input type="hidden" name="matchId" value={{match.id}}>
-                        <input class="coef-hidden-field" type="hidden" name="coef" value="">
-                        <input class="potential-hidden-field" type="hidden" name="potential" value="">
-                        <input class="outcome-hidden-field" type="hidden" name="outcome" value="">
                         <input type="range " name="bet" class="bet-field" id=" " min="10" max="{{user.customUser.balance}}" required>
                         <h5 style="margin: 2%; ">Ваш баланс: {{user.customUser.balance}}$</h5>
                         <h3 class="green-text potential-win">Потенциальный выигрыш: </h3>
@@ -261,12 +197,8 @@
                     let coefField = document.querySelector(".coef-field ")
                     let coef = e.target.innerHTML
                     let passedOutcome = e.target.parentNode.querySelector(".outcome ").innerHTML
-                    let outcomeHidden = document.querySelector(".outcome-hidden-field")
-                    let coefHidden = document.querySelector(".coef-hidden-field")
-                    outcomeHidden.value = passedOutcome
                     outcomeField.innerHTML = "Исход: " + passedOutcome
                     coefField.innerHTML = "Коэффициент: " + coef
-                    coefHidden.value = coef
                 }
 
             })
@@ -276,8 +208,6 @@
                 let potential = document.querySelector(".potential-win")
                 let coef = document.querySelector(".coef-field").innerHTML.slice(13)
                 potential.innerHTML = "Ваш потенциальный выигрыш " + (+e.target.value * +coef) + "$"
-                    let potentialHidden = document.querySelector(".potential-hidden-field")
-                potentialHidden.value = +e.target.value * +coef
             }
         </script>
         <script>
