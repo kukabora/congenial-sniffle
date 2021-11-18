@@ -72,6 +72,9 @@
                 </li>
               </ul>
         </div>
+                {% if user.is_authenticated %}
+              <div class="white-text right" style="display: inline-block"><p style="color: white !important; font-weight: 600;">Ваш баланс: {{user.customUser.balance}}$</p></div>
+              {% endif %}
       </nav>
     <div class="container-fluid">
         <div class="row">
