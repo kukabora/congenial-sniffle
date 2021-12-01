@@ -211,6 +211,7 @@
                 </div>
             </div>
         </div>
+        {% if user.is_authenticated %}
         <div id="bet_place" class="modal">
             <div class="modal-content" style="width: 100%">
                 <div class="container center-align">
@@ -229,13 +230,14 @@
                         <input class="potential-hidden-field" type="hidden" name="potential" value="">
                         <input class="outcome-hidden-field" type="hidden" name="outcome" value="">
                         <input type="range " name="bet" class="bet-field" id=" " min="10" max="{{user.customUser.balance}}" required>
-                        <h5 style="margin: 2%; ">Ваш баланс: {{user.customUser.balance}}$</h5>
+                        <h5 class="user-balance" style="margin: 2%; ">Ваш баланс: {{user.customUser.balance}}$</h5>
                         <h3 class="green-text potential-win">Потенциальный выигрыш: </h3>
-                        <button type="submit " class="btn red darken-4 white-text ">Сделать ставку!</button>
+                        <button type="submit " class="btn red darken-4 white-text bet-creation-btn">Сделать ставку!</button>
                     </form>
                 </div>
             </div>
         </div>
+        {% endif %}
         <footer class="footer ">
             <p class="igra ">Отвественная игра</p>
             <p>
@@ -260,6 +262,15 @@
             coefficientBtns.forEach(btn => {
                 btn.innerHTML = (Math.random() * 5 + 1).toFixed(2);
                 btn.onclick = (e) => {
+                    let betField = document.querySelector(".bet-field").value
+                    if (betField <= 0){
+                        let btn = document.querySelector(".bet-creation-btn")
+                        btn.type = "button"
+                    }
+                    else {
+                        let btn = document.querySelector(".bet-creation-btn")
+                        btn.type = "submit"
+                    }
                     let outcomeField = document.querySelector(".outcome-field ")
                     let coefField = document.querySelector(".coef-field ")
                     let coef = e.target.innerHTML
@@ -276,6 +287,9 @@
 
             let betField = document.querySelector(".bet-field")
             betField.oninput = (e) => {
+                let balance = document.querySelector(".user-balance").innerHTML.slice(11, -1)
+                if (e.target.value > +balance)
+                    e.target.value = balance
                 let potential = document.querySelector(".potential-win")
                 let coef = document.querySelector(".coef-field").innerHTML.slice(13)
                 potential.innerHTML = "Ваш потенциальный выигрыш " + (+e.target.value * +coef) + "$"
@@ -286,7 +300,7 @@
         <script>
             let datefield = document.querySelector(".bet-date2 ")
             let today = new Date()
-            datefield.innerHTML += today.getDate() + ". " + today.getMonth() + ". " + today.getFullYear()
+            datefield.innerHTML += today.getDate() + ". " + (+today.getMonth()+1) + ". " + today.getFullYear()
         </script>
         <script src="{% static 'js/materialize.js' %} "></script>
         <script src="{% static 'js/modals.js' %} "></script>

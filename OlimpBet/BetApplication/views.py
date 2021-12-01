@@ -83,6 +83,13 @@ def bet_place(request):
 
 
 def payment(request):
+    if request.method == "POST":
+        amount = request.POST['amount']
+        user = User.objects.get(id=request.user.id)
+        user.customUser.balance += int(amount)
+        user.save()
+        user.customUser.save()
+        return redirect("main")
     context = {}
     return render(request, 'BetApplication/payment.html', context)
 
